@@ -11,9 +11,8 @@ namespace NewYearTree
     {
         static public List<NewYearItem> ItemsList = new List<NewYearItem>()
         {
-            new TreeToy(25, 15),
+            new TreeToy(10, 10),
             new SnowItem(10, 10)
-
         };
 
         static void ShowItem(NewYearItem it)
@@ -24,7 +23,7 @@ namespace NewYearTree
         }
         static void Main(string[] args)
         {
-            Console.OutputEncoding = Encoding.UTF8;
+            Console.OutputEncoding = Encoding.ASCII;
             Console.CursorVisible = false;
 
 

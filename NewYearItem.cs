@@ -19,6 +19,6 @@ namespace NewYearTree
         {
             X = x; Y = y; Color = color; View = view;
         }
-        abstract public void SnowDown();
+        virtual public void SnowDown() { }
     }
 }

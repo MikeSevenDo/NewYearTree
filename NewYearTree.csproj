@@ -45,8 +45,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="NewYearItem.cs" />
+    <Compile Include="NewYearTree.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TreeNeedle.cs" />
     <Compile Include="SnowItem.cs" />
     <Compile Include="TreeToy.cs" />
   </ItemGroup>
