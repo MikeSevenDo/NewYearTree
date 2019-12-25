@@ -83,7 +83,7 @@ namespace NewYearTree
             new SnowItem(42, 18, 60),
             new SnowItem(42, 19, 60),
             new SnowItem(42, 20, 60)
-        };                   
+        };
 
         static void ShowItem(NewYearItem it)
         {
@@ -102,7 +102,9 @@ namespace NewYearTree
             foreach (string line in Tree)
             {
                 Console.SetCursorPosition(20, i++);
-                Console.ForegroundColor = ConsoleColor.Green;
+                if (i < 23)
+                    Console.ForegroundColor = ConsoleColor.Green;
+                else Console.ForegroundColor = ConsoleColor.DarkRed;
                 Console.WriteLine(line);
             }
 
