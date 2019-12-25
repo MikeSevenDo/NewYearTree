@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Media;
+
 // Console.WriteLine("֎۝ₒ•†‡║♪●♫█꭛"  ◢◣);
 namespace NewYearTree
 {
@@ -84,6 +86,7 @@ namespace NewYearTree
             new SnowItem(42, 19, 60),
             new SnowItem(42, 20, 60)
         };
+        static SoundPlayer Music = new SoundPlayer();
 
         static void ShowItem(NewYearItem it)
         {
@@ -97,6 +100,8 @@ namespace NewYearTree
             Console.CursorVisible = false;
             Console.SetWindowSize(60, 25);
             Console.SetBufferSize(Console.WindowWidth, Console.WindowHeight);
+            //Music.Load();
+            //Music.Play();
 
             int i = 5;
             foreach (string line in Tree)
