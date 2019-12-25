@@ -63,26 +63,26 @@ namespace NewYearTree
             new SnowItem(0, 19, 20),
             new SnowItem(0, 20, 20),
 
-            new SnowItem(43, 1, 60),
-            new SnowItem(43, 2, 60),
-            new SnowItem(43, 3, 60),
-            new SnowItem(43, 4, 60),
-            new SnowItem(43, 5, 60),
-            new SnowItem(43, 6, 60),
-            new SnowItem(43, 7, 60),
-            new SnowItem(43, 8, 60),
-            new SnowItem(43, 9, 60),
-            new SnowItem(43, 10, 60),
-            new SnowItem(43, 11, 60),
-            new SnowItem(43, 12, 60),
-            new SnowItem(43, 13, 60),
-            new SnowItem(43, 14, 60),
-            new SnowItem(43, 15, 60),
-            new SnowItem(43, 16, 60),
-            new SnowItem(43, 17, 60),
-            new SnowItem(43, 18, 60),
-            new SnowItem(43, 19, 60),
-            new SnowItem(43, 20, 60)
+            new SnowItem(42, 1, 60),
+            new SnowItem(42, 2, 60),
+            new SnowItem(42, 3, 60),
+            new SnowItem(42, 4, 60),
+            new SnowItem(42, 5, 60),
+            new SnowItem(42, 6, 60),
+            new SnowItem(42, 7, 60),
+            new SnowItem(42, 8, 60),
+            new SnowItem(42, 9, 60),
+            new SnowItem(42, 10, 60),
+            new SnowItem(42, 11, 60),
+            new SnowItem(42, 12, 60),
+            new SnowItem(42, 13, 60),
+            new SnowItem(42, 14, 60),
+            new SnowItem(42, 15, 60),
+            new SnowItem(42, 16, 60),
+            new SnowItem(42, 17, 60),
+            new SnowItem(42, 18, 60),
+            new SnowItem(42, 19, 60),
+            new SnowItem(42, 20, 60)
         };                   
 
         static void ShowItem(NewYearItem it)
@@ -95,6 +95,8 @@ namespace NewYearTree
         {
             Console.OutputEncoding = Encoding.Unicode;
             Console.CursorVisible = false;
+            Console.SetWindowSize(60, 25);
+            Console.SetBufferSize(Console.WindowWidth, Console.WindowHeight);
 
             int i = 5;
             foreach (string line in Tree)

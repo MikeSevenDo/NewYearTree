@@ -15,7 +15,12 @@ namespace NewYearTree
             ConsoleColor.Yellow,
             ConsoleColor.Magenta,
             ConsoleColor.Blue,
-            ConsoleColor.DarkCyan
+            ConsoleColor.DarkCyan,
+            ConsoleColor.White, 
+            ConsoleColor.DarkYellow, 
+            ConsoleColor.DarkMagenta, 
+            ConsoleColor.DarkRed, 
+            ConsoleColor.DarkBlue
         };
         Random rand { get; set; }
         public TreeToy(int x, int y, int r) : base(x, y)
@@ -28,7 +33,7 @@ namespace NewYearTree
         {
             ConsoleColor curColor = this.Color;
             while (curColor == this.Color)
-                this.Color = ColorPanel[rand.Next(0, 5)];
+                this.Color = ColorPanel[rand.Next(0, 10)];
         }
     }
 }
