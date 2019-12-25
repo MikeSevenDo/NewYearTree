@@ -18,17 +18,17 @@ namespace NewYearTree
             ConsoleColor.DarkCyan
         };
         Random rand { get; set; }
-        public TreeToy(int x, int y) : base(x, y)
+        public TreeToy(int x, int y, int r) : base(x, y)
         {
-            rand = new Random();
-            Color = ColorPanel[rand.Next(0, 4)];
+            rand = new Random(r);
+            Color = ColorPanel[rand.Next(0, 5)];
             View = '֎';
         }
         public override void SnowDown()
         {
             ConsoleColor curColor = this.Color;
             while (curColor == this.Color)
-                this.Color = ColorPanel[rand.Next(0, 4)];
+                this.Color = ColorPanel[rand.Next(0, 5)];
         }
     }
 }

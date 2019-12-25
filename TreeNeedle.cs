@@ -8,7 +8,7 @@ namespace NewYearTree
 {
     class TreeNeedle : NewYearItem
     {
-        TreeNeedle(int x, int y, char c) : base(x, y)
+        public TreeNeedle(int x, int y, char c) : base(x, y)
         {
             View = c;
         }

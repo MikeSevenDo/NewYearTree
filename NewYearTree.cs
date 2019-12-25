@@ -17,7 +17,6 @@ namespace NewYearTree
         }
         void GetNewYearTree()
         {
-
         }
     }
 }

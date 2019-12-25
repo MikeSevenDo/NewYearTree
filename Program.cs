@@ -4,16 +4,86 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 // Console.WriteLine("֎۝ₒ•†‡║♪●♫█꭛"  ◢◣);
 namespace NewYearTree
 {
     class Program
     {
+        static public List<string> Tree = new List<string>()
+        {
+            @"          /\ ",
+            @"         //\\",
+            @"        ///\\\",
+            @"        ///\\\" ,
+            @"       ////\\\\" ,
+            @"      /////\\\\\" ,
+            @"     //////\\\\\\" ,
+            @"      /////\\\\\" ,
+            @"     //////\\\\\\" ,
+            @"    ///////\\\\\\\" ,
+            @"   ////////\\\\\\\\" ,
+            @"     //////\\\\\\" ,
+            @"    ///////\\\\\\\" ,
+            @"   ////////\\\\\\\\" ,
+            @"  /////////\\\\\\\\\" ,
+            @" //////////\\\\\\\\\\" ,
+            @"///////////\\\\\\\\\\\" ,
+            @"        ||||||" ,
+            @"        ||||||" ,
+            @"        ||||||"
+        };
         static public List<NewYearItem> ItemsList = new List<NewYearItem>()
         {
-            new TreeToy(10, 10),
-            new SnowItem(10, 10)
-        };
+            new TreeToy(16 + 15, 6, 1),
+            new TreeToy(12 + 15, 10, 2),
+            new TreeToy(18 + 15, 11, 3),
+            new TreeToy(11 + 15, 13, 3),
+            new TreeToy(19 + 15, 16 , 3),
+            new TreeToy(10 + 15, 18, 6),
+            new TreeToy(20 + 15, 20 , 7),
+            new SnowItem(0, 1, 20),
+            new SnowItem(0, 2, 20),
+            new SnowItem(0, 3, 20),
+            new SnowItem(0, 4, 20),
+            new SnowItem(0, 5, 20),
+            new SnowItem(0, 6, 20),
+            new SnowItem(0, 7, 20),
+            new SnowItem(0, 8, 20),
+            new SnowItem(0, 9, 20),
+            new SnowItem(0, 10, 20),
+            new SnowItem(0, 11, 20),
+            new SnowItem(0, 12, 20),
+            new SnowItem(0, 13, 20),
+            new SnowItem(0, 14, 20),
+            new SnowItem(0, 15, 20),
+            new SnowItem(0, 16, 20),
+            new SnowItem(0, 17, 20),
+            new SnowItem(0, 18, 20),
+            new SnowItem(0, 19, 20),
+            new SnowItem(0, 20, 20),
+
+            new SnowItem(43, 1, 60),
+            new SnowItem(43, 2, 60),
+            new SnowItem(43, 3, 60),
+            new SnowItem(43, 4, 60),
+            new SnowItem(43, 5, 60),
+            new SnowItem(43, 6, 60),
+            new SnowItem(43, 7, 60),
+            new SnowItem(43, 8, 60),
+            new SnowItem(43, 9, 60),
+            new SnowItem(43, 10, 60),
+            new SnowItem(43, 11, 60),
+            new SnowItem(43, 12, 60),
+            new SnowItem(43, 13, 60),
+            new SnowItem(43, 14, 60),
+            new SnowItem(43, 15, 60),
+            new SnowItem(43, 16, 60),
+            new SnowItem(43, 17, 60),
+            new SnowItem(43, 18, 60),
+            new SnowItem(43, 19, 60),
+            new SnowItem(43, 20, 60)
+        };                   
 
         static void ShowItem(NewYearItem it)
         {
@@ -23,18 +93,25 @@ namespace NewYearTree
         }
         static void Main(string[] args)
         {
-            Console.OutputEncoding = Encoding.ASCII;
+            Console.OutputEncoding = Encoding.Unicode;
             Console.CursorVisible = false;
 
+            int i = 5;
+            foreach (string line in Tree)
+            {
+                Console.SetCursorPosition(20, i++);
+                Console.ForegroundColor = ConsoleColor.Green;
+                Console.WriteLine(line);
+            }
 
             while (true)
             {
                 foreach (var item in ItemsList)
                 {
-                    ShowItem(item);
-                    Thread.Sleep(200);
                     item.SnowDown();
+                    ShowItem(item);
                 }
+                Thread.Sleep(200);
             }
 
         }
